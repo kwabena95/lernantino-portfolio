@@ -1,0 +1,255 @@
+@import 'config';
+@import 'variables';
+
+
+.header{
+    width: 100%;
+    height: 120px;
+    background: $primary-clr;
+    color: $text-clr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logo{
+        background: $accent-clr;
+        padding: 5px 1rem;
+        height: 65px;
+        
+        .user-name{
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+    }
+
+    // navbar
+    .nav-items{
+       width: 100%;
+
+       .nav-links{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .nav-link{
+                margin-right: 1rem;
+                margin-top: 1rem;
+
+                a{
+                    color: $accent-clr;
+                    border-bottom: 2px solid $accent-clr;
+                }
+            }
+       }
+    }
+}
+
+// banner
+.banner{
+    width: 100%;
+    height: 500px;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('/dist/css/images/user-pic.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    .banner-subtitle{
+        width: 70%;
+        background-color: $accent-clr;
+        position: absolute;
+        right: 0;
+        bottom: 7%;
+
+        p{
+            color: $text-clr;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.5;
+            text-align: center;
+
+            span{
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                border-bottom: 2px solid rgba($section-bg-clr, 0.5);
+            }
+        }
+    }
+}
+
+// main content
+main{
+    background-color: $section-bg-clr;
+    width: 100%;
+    height: 100%;
+
+    .container{
+        margin: 0 auto;
+        padding: 3rem 0;
+        width: 90%;
+        text-align: center;
+
+        // about section
+        .about{
+            width: 100%;
+            height: 100%;
+
+            .section-title{
+                margin-bottom: 10px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .title{
+                    color: $text-clr;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                }
+                br{
+                    visibility: hidden;
+                }
+            }
+            .section-decription{
+                width: inherit;
+                height: inherit;
+
+                p{
+                    color: $text-clr;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+
+        // work section
+        .work{
+            width: 100%;
+            height: 100%;
+            padding: 2rem 0;
+
+            .section-title{
+                margin-bottom: 10px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .title{
+                    color: $text-clr;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                }
+            }
+
+            // grid
+            .work-grid{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+        
+                .grid-items{
+                    width: 100%;
+                    height: 100%;
+                    border: 5px solid $accent-clr;
+                    position: relative;
+                    transition: all .2s ease-in-out;
+                    opacity: .7;
+                    z-index: 1;
+
+                    .desc{
+                        position: absolute;
+                        left: 0;
+                        bottom: 10%;
+                        color: $text-clr;
+                        background-color: $accent-clr;
+                        padding: 10px 1rem;
+
+
+                        h4{
+                            font-weight: bold;
+                        }
+                    }
+
+                    &:hover{
+                        transform: scale(1.06);
+                        opacity: 1;
+                        margin: 1rem 0;
+                        z-index: 9999;
+                    }
+                }
+
+                .grid-display-4,
+                .grid-display-5{
+                    height: 350px;
+                    
+                    img{
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    // contact
+    .contact{
+        width: 100%;
+        height: 100%;
+        padding-bottom: 2rem;
+
+        .section-title{
+            margin-bottom: 10px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .title{
+                color: $text-clr;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+            
+            br{
+                visibility: hidden;
+            }
+        }
+
+        // info-menu
+        .info-menu{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+     
+            .info-item{
+                margin-right: 1rem;
+                transition: .2s ease-in-out;
+                border-bottom: 2px solid $text-clr;
+                z-index: 3;
+            
+                &:nth-child(1),
+                &:nth-child(2){
+
+                    font-size: .8rem;
+                }
+                
+                .social-links{
+                    font-size: 1rem;
+                    color: $text-clr;
+                    
+                }
+                 
+            }
+            .social-links:hover{
+                transform: scale(1.4);
+            }
+        }
+    }
+}
+
+// media queries
+@import 'mediaqueries';

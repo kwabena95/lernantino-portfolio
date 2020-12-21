@@ -1,0 +1,240 @@
+// tablet view
+@media  screen and (min-width: $tablet){
+    .header{
+    
+        .logo{
+            padding: 5px 1rem;
+            height: 55px;
+            
+            .user-name{
+                font-size: 2rem;
+            }
+        }
+
+        // navbar
+        .nav-link{
+            margin: 1rem 1.5rem;
+            padding: 0 1rem;
+        }
+    }
+
+    .section-title{
+        width: 100%;
+        br{
+            visibility: visible;
+        }
+    }
+
+    // about
+    .info-item{
+        margin: 1rem 1.5rem;
+    }
+
+}
+
+// laptop view
+@media screen and (min-width: $laptop){
+    .header{
+        height: 100px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // banner
+    .banner{
+        background-position: top;
+
+        .banner-subtitle{
+            width: 60%;
+            bottom: 2%;
+
+            p{
+                font-size: 1.3rem;
+                line-height: 1.4;
+            }
+        }
+    }
+  
+     // about section
+     .about{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+
+        .section-title{
+            flex: 30%;
+
+            .title{
+               font-size: 2rem;
+               text-align: right;
+               border-bottom-style: none;
+            }
+            br{
+                visibility: visible;
+            }
+        }
+        .section-decription{
+            width: 70%;
+            height: inherit;
+            border-left: 2px solid $text-clr;
+
+            p{
+                text-align: left;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    
+    
+        // work section
+        .work{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+    
+            .section-title{
+                flex: 30%;
+    
+                .title{
+                   font-size: 2rem;
+                   text-align: right;
+                   border-bottom-style: none;
+                }
+                br{
+                    visibility: visible;
+                }
+            }
+
+            // grid
+            .work-grid{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                border-left: 2px solid $text-clr;
+                padding-left: 10px;
+                
+            }
+        }
+
+
+
+    // contact
+    .contact{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+
+        .section-title{
+            flex: 30%;
+
+            .title{
+               font-size: 2rem;
+               text-align: right;
+               border-bottom-style: none;
+            }
+            br{
+                visibility: visible;
+            }
+        }
+        .info-menu{
+            flex: 88%;
+            border-left: 2px solid $text-clr;
+
+            .info-items{
+                font-size: 20px;
+            }
+        }
+    
+
+}
+
+// widescreen
+@media screen and (min-width: $widescreen){
+
+    .header{
+    
+        .logo{
+            background: $accent-clr;
+            padding: 5px 1rem;
+            height: 65px;
+            flex: 30%;
+            
+            .user-name{
+                font-size: 2.5rem;
+                letter-spacing: 3px;
+            }
+        }
+    
+        // navbar
+        .nav-items{
+           flex: 70%;
+    
+           .nav-links{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 260px;
+           }
+        }
+    }
+    
+
+    // banner
+    .banner{
+        height: 700px;
+        background-position: top;
+    
+
+        .banner-subtitle{
+            width: 70%;
+            background-color: $accent-clr;
+            position: absolute;
+            right: 0;
+            bottom: 2%;
+
+            p{
+                color: $text-clr;
+                font-size: 1.5rem;
+                font-weight: 300;
+                line-height: 1.5;
+                text-align: center;
+                padding: 1rem;
+
+                span{
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    border-bottom: 2px solid rgba($section-bg-clr, 0.5);
+                }
+            }
+        }
+    }
+
+    // work
+    .desc{
+        width: 200px;
+    }
+
+    .info-item{
+        padding: 1rem;
+        font-size: 1rem;
+        
+        span{
+            font-size: 1rem;
+        } 
+    }
+    
+
+}
+
+
+
+
+
+}
